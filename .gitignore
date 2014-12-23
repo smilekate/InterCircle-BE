@@ -1,0 +1,7 @@
+target/
+.settings/
+.classpath
+.project
+.rpm/
+/.pydevproject
+src/main/resources/bin/*.pyc
