@@ -7,7 +7,7 @@
 	</appender>
 
 	<appender name="INFO" class="org.apache.log4j.RollingFileAppender">
-		<param name="File" value="d:/logs/log_info.txt" />
+		<param name="File" value="/logs/log_info.txt" />
 		<param name="Append" value="true" />
 		<param name="MaxFileSize" value="10MB" />
 		<param name="MaxBackupIndex" value="10" />
