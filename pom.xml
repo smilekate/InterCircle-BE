@@ -63,6 +63,12 @@
             <version>3.12.1.GA</version>
         </dependency>
         
+        <dependency>
+            <artifactId>hibernate-validator</artifactId>
+            <groupId>org.hibernate</groupId>
+            <version>5.0.0.Final</version>
+        </dependency>
+        
         <!-- json lib -->
         <dependency>
             <groupId>net.sf.json-lib</groupId>

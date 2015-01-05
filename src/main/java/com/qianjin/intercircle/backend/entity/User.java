@@ -5,24 +5,33 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+
+import org.hibernate.validator.constraints.Length;
+
+import com.qianjin.intercircle.backend.validation.constraint.ExistName;
 
 @Entity
 @Table(name="BUser")
+@ExistName
 public class User extends SuperEntity {
 
-	@Column(name="BUS_NAME")
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	@NotNull
+	@Length(min = 1, max = 45)
 	private String name;
 	
-	@Column(name="BUS_NICKNAME")
 	private String nickname;
 	
-	@Column(name="BUS_GENDER")
-	private int gender;
+	@NotNull
+	private Integer gender;
 	
-	@Column(name="BUS_PASSWORD")
 	private String password;
 	
-	@Column(name="BUS_EMAIL")
 	private String email;
 
 	@Id
@@ -33,8 +42,7 @@ public class User extends SuperEntity {
 		return id;
 	}
 
-	
-
+	@Column(name="BUS_NAME")
 	public String getName() {
 		return name;
 	}
@@ -43,6 +51,7 @@ public class User extends SuperEntity {
 		this.name = name;
 	}
 
+	@Column(name="BUS_NICKNAME")
 	public String getNickname() {
 		return nickname;
 	}
@@ -51,6 +60,7 @@ public class User extends SuperEntity {
 		this.nickname = nickname;
 	}
 
+	@Column(name="BUS_GENDER")
 	public int getGender() {
 		return gender;
 	}
@@ -59,6 +69,7 @@ public class User extends SuperEntity {
 		this.gender = gender;
 	}
 
+	@Column(name="BUS_PASSWORD")
 	public String getPassword() {
 		return password;
 	}
@@ -67,6 +78,7 @@ public class User extends SuperEntity {
 		this.password = password;
 	}
 
+	@Column(name="BUS_EMAIL")
 	public String getEmail() {
 		return email;
 	}
